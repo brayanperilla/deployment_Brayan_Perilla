@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reloj con Alarma</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="circleBox">
+    <h2>Reloj con alarma</h2>
+    <div id="clock"></div>
+    <span id="ampm"></span>
+
+    <div>
+      <select id="format">
+        <option value="24">24h</option>
+        <option value="12">12h</option>
+      </select>
+    </div>
+
+    <div>
+      <input id="alarmH" type="number" min="0" max="23" placeholder="HH" />
+      <input id="alarmM" type="number" min="0" max="59" placeholder="MM" />
+      <select id="alarmPeriod" style="display:none;">
+        <option value="AM">AM</option>
+        <option value="PM">PM</option>
+      </select>
+      <button id="set">Alarma</button>
+      <button id="clear">Quitar</button>
+    </div>
+    
+    <div id="status">Alarma desactivada</div>
+  </div>
+  <audio id="sound" src="alarma.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
